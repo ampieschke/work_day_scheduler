@@ -28,7 +28,7 @@ body {
   
   .time-block{
     border-radius: 15px;
-    background-color: #d3d3d3;
+
   }
   
   .row {
@@ -64,7 +64,7 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
-  }
+   }
   
   .saveBtn i:hover {
     font-size: 20px;
