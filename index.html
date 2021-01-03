@@ -18,82 +18,49 @@
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
+        <p id="demo"></p>
     </header>
     <div class="container">
         <!-- Timeblocks go here -->
-        <row class="row">
+        <row class="row time-block" value="9">
             <div class="col-2 hour">9am</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
+            <textarea class="col-9 description"></textarea>
             <div class="col-1 saveBtn"></div>
         </row>
-        <row class="row">
+        <row class="row time-block" value="10">
             <div class="col-2 hour">10am</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
+            <textarea class="col-9 description "></textarea>
             <div class="col-1 saveBtn"></div>
         </row>
-        <row class="row">
+        <row class="row time-block" value="11">
             <div class="col-2 hour">11am</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
+            <textarea class="col-9 description "></textarea>
             <div class="col-1 saveBtn"></div>
         </row>
-        <row class="row">
-            <div class="col-2 hour">12am</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
-            <div class="col-1 saveBtn"></div>
-        </row>
-        <row class="row">
-            <div class="col-2 hour">1pm</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
-            <div class="col-1 saveBtn"></div>
-        </row>
-        <row class="row">
-            <div class="col-2 hour">2pm</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
-            <div class="col-1 saveBtn"></div>
-        </row>
-        <row class="row">
-            <div class="col-2 hour">3pm</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
-            <div class="col-1 saveBtn"></div>
-        </row>
-        <row class="row">
-            <div class="col-2 hour">4pm</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
-            <div class="col-1 saveBtn"></div>
-        </row>
-        <row class="row">
-            <div class="col-2 hour">5pm</div>
-            <div class="col-8 time-block">
-                <div class=" description"></div>
-            </div>
-            <div class="col-1 saveBtn"></div>
-        </row>
-    </div>
-    <script>
-        var d = new Date();
-        document.getElementById("currentDay").innerHTML = d;
 
-        $(document).ready(function () {
-            $(".time-block").click(function () {
-                alert("The Time Block was clicked.");
-            });
-        });
+    </div>
+    <script type="text/javascript">
+        var d = new Date();
+        var h = d.getHours();
+        var t = document.getElementById("#time-block").value
+        document.getElementById("currentDay").innerHTML = d;
+        document.getElementById("demo").innerHTML = d.getHours();
+
+
+        if (h == t) {
+            $("#time-block").addClass(present);
+        }
+        else if (h > t) {
+            $("#time-block").addClass(past);
+        }
+        else if (h < t) {
+            $("#time-block").addClass(future);
+        };
+
+
+
+
+
     </script>
 
 
