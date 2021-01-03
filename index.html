@@ -21,8 +21,83 @@
     </header>
     <div class="container">
         <!-- Timeblocks go here -->
+        <row class="row">
+            <div class="col-2 hour">9am</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">10am</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">11am</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">12am</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">1pm</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">2pm</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">3pm</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">4pm</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
+        <row class="row">
+            <div class="col-2 hour">5pm</div>
+            <div class="col-8 time-block">
+                <div class=" description"></div>
+            </div>
+            <div class="col-1 saveBtn"></div>
+        </row>
     </div>
+    <script>
+        var d = new Date();
+        document.getElementById("currentDay").innerHTML = d;
 
+        $(document).ready(function () {
+            $(".time-block").click(function () {
+                alert("The Time Block was clicked.");
+            });
+        });
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 </body>
