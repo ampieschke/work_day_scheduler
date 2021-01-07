@@ -1,12 +1,10 @@
 var d = new Date();
-
 var timeBlockEl = document.querySelector("#time-block");
-
-var hour_block = `<row class="row time-block" value="9">
-<div class="col-2 hour">9am</div>
-<textarea class="col-9 description past"></textarea>
-<button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
-</row>`;
+// var hour_block = `<row class="row time-block" value="9">
+// <div class="col-2 hour">9am</div>
+// <textarea class="col-9 description past"></textarea>
+// <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
+// </row>`;
 
 document.getElementById("currentDay").innerHTML = d;
 document.getElementById("demo").innerHTML = d.getHours();
@@ -32,12 +30,17 @@ function show_hours() {
         <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
         </row>`);
   }
+  var lineItem = localStorage.getItem("text");
+  $(".description").html(lineItem);
 }
 
 function save() {
   let text = $(this).siblings(".description").val();
+  let dayHour = $(this).siblings(".hour").text();
   console.log(text);
-  $(this).siblings(".description").prepend(text);
+  console.log(dayHour);
+  localStorage.setItem("text", text);
+  localStorage.setItem("timeblock", dayHour);
 }
 
 $("#schedule").on("click", ".saveBtn", save);
