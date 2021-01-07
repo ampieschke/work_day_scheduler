@@ -21,39 +21,14 @@
         <p id="demo"></p>
     </header>
     <div class="container">
-        <!-- Timeblocks go here -->
-        <row class="row time-block" value="18">
-            <div class="col-2 hour">9am</div>
-            <textarea class="col-9 description"></textarea>
-            <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
-        </row>
-        <row class="row time-block" value="10">
-            <div class="col-2 hour">10am</div>
-            <textarea class="col-9 description "></textarea>
-            <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
-        </row>
-        <row class="row time-block" value="11">
-            <div class="col-2 hour">11am</div>
-            <textarea class="col-9 description "></textarea>
-            <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
-        </row>
+        <div id="schedule"></div>  
     </div>
-
-    <script type="text/javascript">
-        var d = new Date();
-        var h = d.getHours();
-
-        document.getElementById("currentDay").innerHTML = d;
-        document.getElementById("demo").innerHTML = d.getHours();
-
-
-
-    </script>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
