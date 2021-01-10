@@ -15,6 +15,7 @@ WHEN you refresh the page
 THEN the saved events persist
 
 --- PROJECT LINK ---
+https://ampieschke.github.io/work_day_scheduler/
 
 --- PROJECT SCREENSHOT ---
 Found in Assets folder

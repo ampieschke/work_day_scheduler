@@ -23,30 +23,25 @@ function show_hours() {
         <textarea class="col-9 description ${hour_class}"></textarea>
         <button class="col-1 saveBtn"><i class="fas fa-save"></i></button>
         </row>`);
-
-    //put local storage in this loop?
-    // if (hour == tasks.timeBlock) {
-    //   $(".description").html(lineItem);
-    //
   }
   renderLineItems();
 }
 
 // Will save line items to local storage
 function save() {
-  let text = $(this).siblings(".description").val();
+  let item = $(this).siblings(".description").val();
   let dayHour = $(this).siblings(".hour").text();
-  console.log(text);
+  console.log(item);
   console.log(dayHour);
 
-  localStorage.setItem("text", text);
+  localStorage.setItem("item", item);
   localStorage.setItem("timeblock", dayHour);
 
-  let bingo = {
-    text: text,
+  let entry = {
+    item: item,
     timeBlock: dayHour,
   };
-  tasks.push(bingo);
+  tasks.push(entry);
 
   localStorage.setItem("lineItem", JSON.stringify(tasks));
 
@@ -55,16 +50,12 @@ function save() {
 
 //Will call line items from local storage
 function renderLineItems() {
-  var lineItem = localStorage.getItem("text");
-  for (let hour = 9; hour < 18; hour++) {
-    if (hour == dayHour) {
-      $(this).siblings(".desciption").html(lineItem.text);
-    }
-  }
-  //   //Prints the last lineItem value to all rows
-  //   $(".description").html(lineItem);
+  //Prints the last stored item value to all rows beacuse I can't solve this freaking puzzle.
+  $(".description").html(JSON.parse(localStorage.getItem("item")));
 }
 
+//Calls for the save function to run on click
 $("#schedule").on("click", ".saveBtn", save);
 
+//Calls for show_hours funtion to run
 show_hours();
